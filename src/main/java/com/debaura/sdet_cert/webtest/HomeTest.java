@@ -20,7 +20,7 @@ public class HomeTest {
 
 	@BeforeTest
 	@Parameters("browser")
-	public void setDriver(@Optional("tor") String browser) {
+	public void setDriver(@Optional("firefox") String browser) {
 		this.driver = DriverFactory.getDriver(browser);
 	}
 
