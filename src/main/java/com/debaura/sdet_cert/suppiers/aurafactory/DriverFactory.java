@@ -1,6 +1,7 @@
 package com.debaura.sdet_cert.suppiers.aurafactory;
 
 import static com.debaura.sdet_cert.suppiers.aurafactory.OptionsFact.getChromeOptions;
+import static com.debaura.sdet_cert.suppiers.aurafactory.OptionsFact.getFirefoxOptions2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class DriverFactory {
 	};
 
 	public static final Supplier<WebDriver> torsupplier = () -> {
-		driver = new FirefoxDriver(OptionsFact.getFirefoxOptions2());
+		driver = new FirefoxDriver(getFirefoxOptions2());
 		return driver;
 	};
 
