@@ -1,5 +1,7 @@
 package tests;
 
+import static supplier.DriverFactory.getDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,8 +11,6 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import supplier.DriverFactory;
-
 public class GoogleTest {
 
 	private WebDriver driver;
@@ -18,7 +18,7 @@ public class GoogleTest {
 	@BeforeTest
 	@Parameters("browser")
 	public void setDriver(@Optional("chrome") String browser) {
-		this.driver = DriverFactory.getDriver(browser);
+		this.driver = getDriver(browser);
 
 	}
 
