@@ -11,11 +11,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.google.common.base.Supplier;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class DriverFactory {
 
 	static WebDriver midriver;
 
 	private static final Supplier<WebDriver> chromeSupplier = () -> {
+		WebDriverManager.chromedriver().setup();
 		midriver = new ChromeDriver(getChromeOptions());
 		return midriver;
 	};
